@@ -1,0 +1,108 @@
+/* General Reset */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Portfolio Header Section */
+.portfolio-section {
+  background-color: #053615;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 40px 0;
+}
+
+.portfolio-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.image-item {
+  text-align: center;
+  width: 400px; /* Adjust based on desired size */
+  margin: 100px 0;
+}
+
+.image-item img {
+  width: 100%;
+  background-color: lightgray;
+  height: 100%;
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.image-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image-item p {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .portfolio-section {
+    padding: 50px 0px;
+    margin-top: 50px;
+  }
+  .image-gallery {
+    gap: 30px;
+    padding-bottom: 100px;
+  }
+  .image-item {
+    gap: 30px;
+    margin: 50px 0;
+    width: 90%;
+    height: auto;
+  }
+
+  .portfolio-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-section {
+    padding: 50px 0px;
+    margin-top: 50px;
+  }
+  .image-gallery {
+    gap: 8px;
+    margin: 0px 0px;
+  }
+  .image-item {
+    width: 90%;
+    height: auto;
+  }
+
+  .portfolio-content h1 {
+    font-size: 2rem;
+  }
+}
