@@ -14,7 +14,7 @@ body {
 }
 
 nav {
-  padding: 50px 5%; /* Increased padding for a larger container */
+  padding: 7% 6%; /* Increased padding for a larger container */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@ nav .logo {
 }
 
 nav .logo img {
-  width: 50px;
+  width: 3rem;
   height: auto;
   object-fit: contain;
 }
@@ -38,10 +38,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-}
-
-nav ul li {
-  margin-left: 2rem; /* Increased space between links */
+  gap: 2.5rem; /* Increased space between links */
 }
 
 nav ul li:last-child {
