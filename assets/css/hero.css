@@ -17,92 +17,96 @@ p {
   text-align: justify;
   text-align-last: center;
 }
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  margin-top: 100px;
-  transform: translate(-50%, -50%);
-}
-
-.hero-image img {
-  width: auto;
-  height: 700px;
-  max-height: 700px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
 .hero-section {
-  height: 400px;
   display: flex;
+  flex-direction: row; 
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #053615;
   color: #fff;
-  padding: 50px;
+  padding: 50px 100px;
   position: relative;
   margin-top: 100px;
+  height: 450px; 
 }
 
 .hero-content {
-  flex: 1;
-  margin-left: 400px;
-  line-height: 1;
+  flex: 1; 
+  max-width: 100%;
+  text-align: center; 
+  line-height: 85px;
 }
 
 .hero-content h2 {
-  text-align: center;
-  font-family: Poppins;
-  font-size: 70px;
+  font-family: Poppins, sans-serif;
+  font-size: 4rem;
   font-weight: bold;
   color: #f2f2f2;
+  text-align: left;
 }
 
 .hero-content h1 {
-  text-align: right;
   color: transparent;
-  font-family: "Poppins";
-  font-size: 6rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 6rem; 
   font-weight: bold;
-  margin-right: 120px;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 0.8px #fff;
+  text-align: left;
+  
+}
+
+.hero-image {
+  display: flex;
+  position: relative; 
+  transform: none; 
+  max-width: 100%; 
+}
+
+.hero-image img {
+  width: 100%; 
+  max-width: 750px; 
+  height: auto; 
+  object-fit: contain;
+  border-radius: 0px;
 }
 
 @media screen and (max-width: 768px) {
   .hero-section {
     flex-direction: column;
     height: auto;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 100px 20px 20px; 
+    margin-top: 80px;
+    position: relative; /* To position the image absolutely relative to the container */
+    overflow: visible; /* Ensure the image can overflow outside the container */
   }
 
   .hero-image {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute; /* Float the image out of the container */
+    top: -80px; /* Adjust this value to control how much the image floats out */
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
     margin: 0;
-    transform: none;
+    width: 100%; /* Adjust image width */
   }
 
   .hero-image img {
+    width: 100%; /* Adjust image width */
     height: 400px;
     max-height: 400px;
+    object-fit: contain;
   }
 
   .hero-content {
+    margin-top: 0px; /* Push the content down to make space for the image */
     margin-left: 0;
     text-align: center;
     padding: 20px 0;
+    line-height: 45px;
   }
 
   .hero-content h2 {
     font-size: 2.5rem;
+    text-align: center;
   }
 
   .hero-content h1 {
@@ -113,8 +117,12 @@ p {
 
 @media screen and (max-width: 480px) {
   .hero-section {
-    padding: 10px;
-    
+    padding: 10px 10px 20px; /* Adjust padding for small screens */
+  }
+
+  .hero-content {
+    line-height: 45px;
+    margin-top: 200px; /* Further adjust content placement */
   }
 
   .hero-image img {
@@ -124,6 +132,7 @@ p {
 
   .hero-content h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .hero-content h1 {
@@ -131,6 +140,7 @@ p {
     -webkit-text-stroke: 1px #fff;
   }
 }
+
 
 /* Clientele Section */
 .clientele {
@@ -235,22 +245,24 @@ p {
 /* Services Section */
 .services {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    padding: 0px 20px;
+    padding-bottom: 100px;
+    background-color: #fff;
+    
 }
 
 .services h2 {
     font-size: 2rem;
     color: #053615;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* Service Cards */
 .services-container {
     display: flex;
-    gap: 150px;
+    gap: 100px;
     justify-content: center;
-    flex-wrap: wrap; /* Make it responsive */
+    
 }
 
 .service-card {
