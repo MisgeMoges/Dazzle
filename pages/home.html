@@ -69,11 +69,17 @@
             });
         });
 
+        // page("/dazzle-suk", () => {
+        //   document.getElementById("main-content").innerHTML =
+        //     "<h1>Dazzle-Suk Page</h1>";
+        // });
         page("/dazzle-suk", () => {
-          document.getElementById("main-content").innerHTML =
-            "<h1>Dazzle-Suk Page</h1>";
+          fetch("../pages/dazzle-suk.html")
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById("main-content").innerHTML = html;
+            });
         });
-
         page("/contact", () => {
           fetch("../pages/contact.html")
             .then((response) => response.text())

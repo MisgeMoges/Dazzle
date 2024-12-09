@@ -33,7 +33,37 @@ body {
   align-items: center; /* Center vertically */
   margin: 0px; /* Remove additional margins */
 }
+.category-buttons {
+  height: 100px;
+  width: 100%;
+  background-color: #053615;
+  display: flex; 
+  gap: 40px; /* Space between buttons */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0; 
+  position: relative; /* Ensure pseudo-elements are positioned relative to this container */
+}
 
+.category-buttons .button {
+  background-color: transparent; /* Transparent background */
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase; /* Remove underline */
+  cursor: pointer; /* Make it look clickable */
+  position: relative; /* Position for the bar */
+  padding: 0 15px; /* Add padding for spacing around text */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.vertical-bar {
+  width: 3px; /* Thickness of the bar */
+  height: 50%; /* Height relative to container */
+  background-color: #fff; /* Bar color */
+  opacity: 0.7; /* Slight transparency */
+}
 .portfolio-content h1 {
   font-size: 8rem; /* Adjusted for better visibility */
   font-weight: bold;
@@ -42,34 +72,69 @@ body {
   text-transform: uppercase; /* Capitalizes the text */
   text-align: center; /* Ensure text is centered */
 }
-
 /* Image Gallery */
-.image-gallery {
+/* Title Styling */
+/* Category Title Styling */
+.category-title {
+  align-self: flex-start; /* Align to the top-left of the image-section */
+  margin: 0; /* Remove extra margin */
+}
+
+.category-title h1 {
+  font-size: 24px;
+  color: #053615; /* Match your theme */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+/* Image Section */
+.image-section {
   display: flex;
-  gap: 80px;
-  justify-content: center;
-  margin: 100px 0;
+  flex-direction: column; /* Stack the title and grid */
+  /* Align contents to the start (left) */
+  margin: 50px auto; /* Center the section horizontally */
+  width: 100%; /* Full width */
+  max-width: 1330px; /* Limit the width */
+  padding: 0 20px; /* Add some padding */
+}
+
+.image-gallery {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  gap: 50px; /* Minimize gaps between items */
+  justify-content: center; /* Center the grid */
+  align-items: center; /* Center the items vertically */
+  margin: 30px auto; /* Adjust margins and center the gallery horizontally */
+  max-width: 1200px; /* Optional: Limit gallery width */
+  padding: 20px; /* Add padding for a balanced layout */
 }
 
 .image-item {
   text-align: center;
-  width: 370px; /* Adjust based on desired size */
-  height: 370px; /* Adjust based on desired size */
-  margin: 100px 0;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px; /* Adjust based on desired size */
+  height: auto; 
 }
 
 .image-item img {
-  width: 100%;
+   width: 100%; /* Ensure image takes up full width of container */
+  height: auto; /* Maintain aspect ratio */
   background-color: lightgray;
-  height: 100%;
   border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.03);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
   transition: transform 0.3s ease; /* Add hover effect */
 }
 
+
+/* Hover Effect */
 .image-item img:hover {
   transform: scale(1.05); /* Slight zoom on hover */
 }
+
 
 .image-item p {
   margin-top: 30px;
@@ -79,8 +144,61 @@ body {
   letter-spacing: 1.2px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+   .category-buttons {
+    height: auto; /* Adjust height */
+    gap: 20px; /* Reduce gap */
+    padding: 10px 0; /* Add some padding */
+  }
+
+  .category-buttons .button {
+    font-size: 1.2rem; /* Reduce font size */
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .vertical-bar {
+    width: 2px; /* Thinner bar */
+    height: 40%; /* Reduce bar height */
+  }
+  .category-title h1 {
+    font-size: 20px; /* Slightly reduce font size */
+    letter-spacing: 1px; /* Adjust spacing */
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 30px; /* Reduce gap between items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .image-item {
+    width: 300px; /* Adjust size */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .category-buttons {
+   /* Allow buttons to wrap */
+    gap: 15px; /* Further reduce gap */
+  }
+
+  .category-buttons .button {
+    font-size: 0.7rem;
+    letter-spacing: normal; /* Further reduce font size */
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+  }
+
+ .vertical-bar {
+  width: 3px; /* Thickness of the bar */
+  height: 50%; /* Height relative to container */
+  background-color: #fff; /* Bar color */
+  opacity: 0.7; /* Slight transparency */
+}
   .portfolio-section {
     padding: 0px 0px;
     margin-top: 50px;
@@ -89,37 +207,72 @@ body {
   .portfolio-content {
     height: 150px;
   }
-  .image-gallery {
-    gap: 30px;
-    padding-bottom: 100px;
+    .image-item p {
+    font-size: 18px;
   }
-  .image-item {
-    gap: 30px;
-    margin: 50px 0;
-    width: 90%;
-    height: auto;
-  }
-
   .portfolio-content h1 {
     font-size: 4rem;
   }
+  .category-title h1 {
+    font-size: 18px; /* Reduce font size further */
+    letter-spacing: 0.8px; /* Adjust letter spacing */
+  }
+
+  .image-section {
+    margin: 30px auto; /* Adjust vertical spacing */
+    padding: 0 10px; /* Reduce padding */
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(1, 1fr); /* Switch to 1 column */
+    gap: 20px; /* Reduce gap further */
+    margin: 20px auto; /* Adjust margins */
+  }
+
+  .image-item {
+    width: 100%; /* Make items take full width */
+  }
+
+  .image-item img {
+    border-radius: 5px; /* Adjust border radius for smaller screens */
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .portfolio-section {
+/* For extra-small screens */
+@media (max-width: 480px) {
+  .category-buttons {
+     /* Stack buttons vertically */
+    height: auto; /* Remove fixed height */
+    gap: 10px; /* Minimal gap */
+  }
+
+  .category-buttons .button {
+    font-size: 0.7rem; /* Smallest font size */
+    text-align: center; /* Center-align text */
+  }
+
+  .vertical-bar {
+    display: none; /* Hide bar for better spacing */
+  }
+   .portfolio-section {
     padding: 0px 0px;
     margin-top: 50px;
   }
-  .image-gallery {
-    gap: 8px;
-    margin: 0px 0px;
-  }
-  .image-item {
-    width: 90%;
-    height: auto;
-  }
-
+  
+ 
   .portfolio-content h1 {
     font-size: 2rem;
+  }
+  .category-title h1 {
+    font-size: 16px; /* Further reduce font size */
+    letter-spacing: 0.5px; /* Adjust letter spacing */
+  }
+
+  .image-gallery {
+    padding: 5px; /* Minimal padding */
+  }
+
+  .image-item img {
+    box-shadow: none; /* Remove shadow for simplicity */
   }
 }

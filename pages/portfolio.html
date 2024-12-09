@@ -3,34 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Studio</title>
+    <title>Creative Studio Portfolio</title>
     <link rel="stylesheet" href="../assets/css/portfolio.css" />
-  </head>
-  <body>
-    <header>
+    
+  
+    <header id="header">
       <div class="portfolio-section">
         <div class="portfolio-content">
           <h1>PORTFOLIO</h1>
         </div>
       </div>
     </header>
-     
-       
 
-        <div class="image-gallery">
-          <div class="image-item">
-            <img src="/assets//images//02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-01.png" alt="Image 1" />
-            <p>GRAPHIC DESIGN </p>
-          </div>
-          <div class="image-item">
-            <img src="/assets//images//02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-02.png" alt="Image 2" />
-            <p>BRANDING </p>
-          </div>
-          <div class="image-item">
-            <img src="/assets//images//02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-03.png" alt="Image 3" />
-            <p>DAZZLE’S SPECIAL</p>
-          </div>
+    <div id="content">
+      <!-- Initial Portfolio Cards -->
+      <div class="image-gallery">
+        <div
+          class="image-item"
+          data-category="graphic"
+          
+        >
+          <img
+            src="/assets/images/02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-01.png"
+            alt="Graphic Design"
+          />
+          <p>GRAPHIC DESIGN</p>
         </div>
-      
+        <div class="image-item" data-category="branding">
+          <img
+            src="/assets/images/02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-02.png"
+            alt="Branding"
+          />
+          <p>BRANDING</p>
+        </div>
+        <div class="image-item" data-category="dazzle">
+          <img
+            src="/assets/images/02 PORTFOLIO/00 ICONS/PORTFOLIO ICONS-03.png"
+            alt="Dazzle’s Special"
+          />
+          <p>DAZZLE’S SPECIAL</p>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>

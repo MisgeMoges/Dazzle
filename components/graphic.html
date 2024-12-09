@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphic Design</title>
+    <link rel="stylesheet" href="../assets/css/portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <div class="portfolio-section">
+        <div class="portfolio-content">
+          <h1>GRAPHIC DESIGN</h1>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="category-buttons">
+          <button onclick="navigateTo('index.html')">Back to Categories</button>
+          <button onclick="navigateTo('branding.html')">Branding</button>
+          <button onclick="navigateTo('dazzles-special.html')">Dazzle’s Special</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="image-gallery">
+      <!-- Images for Graphic Design -->
+      <div class="image-item">
+        <img src="/assets/images/graphic1.png" alt="Graphic 1" />
+      </div>
+      <div class="image-item">
+        <img src="/assets/images/graphic2.png" alt="Graphic 2" />
+      </div>
+    </div>
+
+    <script>
+      function navigateTo(categoryPage) {
+        window.location.href = categoryPage;
+      }
+    </script>
+  </body>
+</html>
