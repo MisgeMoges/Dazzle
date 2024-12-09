@@ -20,7 +20,7 @@
     <main id="main-content"></main>
     <div id="footer-container"></div>
 
-    <script src="../assets/js/main.js" defer></script>
+    <!-- <script src="../assets/js/main.js" defer></script> -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Load navbar and footer components
@@ -54,14 +54,13 @@
         //   document.getElementById("main-content").innerHTML =
         //     "<h1>About Page</h1>";
         // });
-          page("/about", () => {
+        page("/about", () => {
           fetch("../pages/about.html")
             .then((response) => response.text())
             .then((html) => {
               document.getElementById("main-content").innerHTML = html;
             });
         });
-
         page("/portfolio", () => {
           fetch("../pages/portfolio.html")
             .then((response) => response.text())
@@ -70,12 +69,18 @@
             });
         });
 
+        // page("/dazzle-suk", () => {
+        //   document.getElementById("main-content").innerHTML =
+        //     "<h1>Dazzle-Suk Page</h1>";
+        // });
         page("/dazzle-suk", () => {
-          document.getElementById("main-content").innerHTML =
-            "<h1>Dazzle-Suk Page</h1>";
+          fetch("../pages/dazzle-suk.html")
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById("main-content").innerHTML = html;
+            });
         });
-
-         page("/contact", () => {
+        page("/contact", () => {
           fetch("../pages/contact.html")
             .then((response) => response.text())
             .then((html) => {
@@ -97,5 +102,6 @@
         page("/home"); // Load the home page initially
       });
     </script>
+    <script src="../assets/js/main.js" defer></script>
   </body>
 </html>
