@@ -38,25 +38,24 @@ nav ul {
   align-items: center;
 }
 
-
 /* 
 nav ul li:last-child {
   margin-left: 20rem; 
 } */
-.contact-container{
+.contact-container {
   text-align: right;
 }
-nav .contact-container a{
+nav .contact-container a {
   text-decoration: none;
   color: #2e8b57;
   font-size: 100%; /* Increased font size */
   font-weight: 500; /* Slightly bolder text */
-  padding: 6px 12px; /* Increased padding */
+  padding: 6px 0px; /* Increased padding */
   border-radius: 5px;
   position: relative; /* Required for the pseudo-element */
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color change */
   text-transform: uppercase; /* Converts text to uppercase */
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 nav .contact-container a::after {
   content: "";
@@ -104,9 +103,6 @@ nav ul li a:hover::after {
 nav .contact-link {
   color: #2e8b57;
 }
-
-
-
 
 /* Hamburger menu styles */
 .hamburger {
@@ -220,6 +216,9 @@ nav .contact-link {
   nav ul {
     display: none; /* Hide regular nav links on mobile */
   }
+   nav .contact-container {
+    display: none;
+  }
   nav .nav-links {
     display: none;
   }
@@ -251,4 +250,5 @@ nav .contact-link {
   .menubar ul li a {
     font-size: 1.2rem; /* Increased font size */
   }
+ 
 }

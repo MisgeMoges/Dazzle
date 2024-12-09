@@ -17,23 +17,35 @@ body {
 .portfolio-section {
   background-color: #053615;
   text-align: center;
-  padding: 50px 20px;
+  padding: 0px 0px;
   margin: 40px 0;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-content {
+  height: 250px;
+  width: 100%;
+  background-color: #053615;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0px; /* Remove additional margins */
 }
 
 .portfolio-content h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 4rem;
-  color: #fff;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  font-size: 8rem; /* Adjusted for better visibility */
+  font-weight: bold;
+  color: transparent; /* Makes the text transparent */
+  -webkit-text-stroke: 1px #fff; /* White text stroke for outline */
+  text-transform: uppercase; /* Capitalizes the text */
+  text-align: center; /* Ensure text is centered */
 }
 
 /* Image Gallery */
 .image-gallery {
   display: flex;
-  flex-wrap: wrap;
   gap: 80px;
   justify-content: center;
   margin: 100px 0;
@@ -41,7 +53,8 @@ body {
 
 .image-item {
   text-align: center;
-  width: 400px; /* Adjust based on desired size */
+  width: 370px; /* Adjust based on desired size */
+  height: 370px; /* Adjust based on desired size */
   margin: 100px 0;
 }
 
@@ -69,8 +82,12 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .portfolio-section {
-    padding: 50px 0px;
+    padding: 0px 0px;
     margin-top: 50px;
+    
+  }
+  .portfolio-content {
+    height: 150px;
   }
   .image-gallery {
     gap: 30px;
@@ -84,13 +101,13 @@ body {
   }
 
   .portfolio-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .portfolio-section {
-    padding: 50px 0px;
+    padding: 0px 0px;
     margin-top: 50px;
   }
   .image-gallery {

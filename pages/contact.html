@@ -7,29 +7,39 @@
     <link rel="stylesheet" href="../assets/css/contact.css" />
   </head>
   <body>
-    <section class="contact-section">
-      <div class="header-bar">
+    <header>
+      <div class="contact-section">
+       <div class="title-container">
         <h1>CONTACT US</h1>
       </div>
-      <div class="container">
-        <p>
+      </div>
+    </header>
+    <section class="contact-us">
+      
+        <div class="text-container">
+          <p>
           HAVE QUESTIONS? WE'D LOVE TO HEAR FROM YOU.<br />
           SEND US A MESSAGE AND WE'LL RESPOND AS SOON AS POSSIBLE.
         </p>
+        </div>
         <form class="contact-form">
-          <label for="name">NAME</label>
+          <div><label for="name">NAME</label>
           <input type="text" id="name" name="name" placeholder="" />
-
-          <label for="email">EMAIL</label>
+        </div>
+         <div>
+           <label for="email">EMAIL</label>
           <input type="email" id="email" name="email" placeholder="" />
 
-          <label for="message">MESSAGE</label>
+         </div>
+          <div>
+            <label for="message">MESSAGE</label>
           <textarea
             id="message"
             name="message"
             rows="5"
             placeholder=""
           ></textarea>
+          </div>
 
           <button type="submit">SEND</button>
         </form>
